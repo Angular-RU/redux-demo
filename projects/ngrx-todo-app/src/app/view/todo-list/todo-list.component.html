@@ -1,0 +1,19 @@
+<section>
+  <simple-notifications [options]="options"></simple-notifications>
+  <mat-card class="no-drag">
+    <h1>Ngrx-Todo-app</h1>
+    <mat-list>
+      <app-todo [todo]="todo" *ngFor="let todo of (todos$ | async)"></app-todo>
+    </mat-list>
+    <form>
+      <mat-input-container>
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="title" name="title" matInput placeholder="Добавьте задачу..." />
+        </mat-form-field>
+        <button class="add-todo" color="warn" mat-icon-button [disabled]="!title" (click)="addTodo(title)">
+          <mat-icon class="add-todo-icon">add_circle</mat-icon>
+        </button>
+      </mat-input-container>
+    </form>
+  </mat-card>
+</section>

@@ -1,0 +1,18 @@
+#todo {
+  margin: 0 1em;
+  cursor: pointer;
+
+  &:hover {
+    color: blue;
+  }
+}
+
+.todo-edit {
+  margin: 0 1em;
+}
+
+.todo-done {
+  text-decoration: line-through;
+  color: black !important;
+  cursor: default !important;
+}

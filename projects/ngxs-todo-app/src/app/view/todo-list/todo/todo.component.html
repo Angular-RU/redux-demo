@@ -1,0 +1,15 @@
+<mat-list-item>
+  <mat-checkbox [formControl]="checkField"></mat-checkbox>
+  <span id="todo" [ngClass]="{'todo-done': todo.completed}" (click)="activeEditMode()" [hidden]="editing">{{todo.text}}</span>
+  <input
+    class="todo-edit"
+    type="text"
+    #textInput
+    (keyup.enter)="todo.text !== textInput.value ? updateTodo(todo.id, textInput.value) : editing = false"
+    (blur)="todo.text !== textInput.value ? updateTodo(todo.id, textInput.value) : editing = false"
+    [formControl]="textField"
+    [hidden]="!editing"/>
+  <button mat-icon-button color="warn" (click)="deleteTodo(todo.id)">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-list-item>
