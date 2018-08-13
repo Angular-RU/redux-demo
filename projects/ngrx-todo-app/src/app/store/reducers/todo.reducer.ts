@@ -1,12 +1,15 @@
 import { Todo } from 'projects/ngrx-todo-app/src/app/core/models/Todo';
 import * as TodoActions from '../actions/todo.actions';
 import { initialTodos } from 'projects/ngrx-todo-app/src/app/core/constants/initialTodos';
+import { Action } from '@ngrx/store';
 
 const initialState: Todo[] = [
   ...initialTodos
 ];
 
-export function TodosReducer(state: Todo[] = initialState, action: TodoActions.TodoActionType) {
+export type Reducer<T> = (state: T, action: Action) => T;
+
+export const TodosReducer: Reducer<Todo[]> = (state: Todo[] = initialState, action: TodoActions.TodoActionType) => {
   switch (action.type) {
     case TodoActions.ADD_TODO: {
       return [
@@ -49,4 +52,4 @@ export function TodosReducer(state: Todo[] = initialState, action: TodoActions.T
       return state;
     }
   }
-}
+};
