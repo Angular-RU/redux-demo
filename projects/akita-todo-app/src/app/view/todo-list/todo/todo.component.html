@@ -1,0 +1,13 @@
+<mat-list-item>
+  <mat-checkbox [formControl]="checkField"></mat-checkbox>
+  <span id="todo" [ngClass]="{'todo-done': todo.completed}" (click)="activeEditMode()" [hidden]="editing">{{todo.title}}</span>
+  <input
+    class="todo-edit"
+    type="text"
+    #textInput
+    [formControl]="textField"
+    [hidden]="!editing"/>
+  <button mat-icon-button color="warn" (click)="delete.emit(todo.id)">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-list-item>

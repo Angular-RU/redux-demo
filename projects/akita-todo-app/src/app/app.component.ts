@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
+import 'hammerjs';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `<app-todo-list></app-todo-list>`
 })
 export class AppComponent {
-  title = 'akita-todo-app';
 }

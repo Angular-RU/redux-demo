@@ -1,0 +1,20 @@
+<section>
+  <mat-card class="no-drag">
+    <h1>Akita-Todo-app</h1>
+    <app-todos-filters (update)="changeFilter($event)" [filters]="filters" [active]="activeFilter$ | async">
+    </app-todos-filters>
+    <mat-list>
+      <app-todo [todo]="todo" *ngFor="let todo of (todos$ | async)" (delete)="delete($event)" (complete)="complete($event)"></app-todo>
+    </mat-list>
+    <form>
+      <mat-input-container>
+        <mat-form-field class="example-full-width">
+          <input #input name="title" matInput placeholder="Добавьте задачу..." />
+        </mat-form-field>
+        <button (keydown.enter)="add(input)"  class="add-todo" color="warn" mat-icon-button [disabled]="!input.value" (click)="add(input)">
+          <mat-icon class="add-todo-icon">add_circle</mat-icon>
+        </button>
+      </mat-input-container>
+    </form>
+  </mat-card>
+</section>

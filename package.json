@@ -22,6 +22,8 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@datorama/akita": "^1.4.0",
+    "@datorama/akita-ngdevtools": "^1.0.0",
     "@ngrx/store": "^6.1.0",
     "@ngxs/devtools-plugin": "^3.2.0",
     "@ngxs/logger-plugin": "^3.2.0",
