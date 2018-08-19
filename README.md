@@ -7,6 +7,7 @@ Run `ng serve project_name` for a dev server. Navigate to `http://localhost:4200
 
 ## Links
 
+- [Angular aka Fiber example](https://angular6-fiber-next.stackblitz.io/)
 - [Akita](https://netbasal.gitbook.io/akita)
 - [Statistics](http://www.npmtrends.com/@datorama/akita-vs-@ngrx/store-vs-@ngxs/store-vs-redux-observable-vs-@angular-redux/store-vs-store-saga)
 - [NGXS](https://ngxs.gitbook.io/ngxs)
